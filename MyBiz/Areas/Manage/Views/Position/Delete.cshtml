@@ -1,0 +1,21 @@
+﻿@model Position
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card d-flex justify-content-between flex-row">
+                <div class="card-body">
+                    @Model.Name
+                </div>
+                <form asp-action="delete" class="d-flex align-items-center justify-content-center m-2">
+                    <button type="submit" asp-action="delete" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

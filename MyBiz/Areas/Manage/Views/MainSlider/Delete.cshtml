@@ -1,0 +1,26 @@
+﻿@model MainSlider
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col m-5">
+            <div class="card" style="width: 18rem;">
+                <img src="~/uploads/mainsliders/@Model.Image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Title  - order: @Model.Order</h5>
+                    <p class="card-text">@Model.Desc</p>
+                    <p class="card-text">@Model.BtnText</p>
+                    <p class="card-text">@Model.BtnUrl</p>
+                    <div class="d-flex">
+                        <a asp-action="index" class="btn btn-primary mr-3">Go back</a>
+                        <form asp-action="delete">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
