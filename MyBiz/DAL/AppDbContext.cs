@@ -15,5 +15,8 @@ namespace MyBiz.DAL
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<MainSlider> MainSliders { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<PortfolioImage> PortfolioImages { get; set; }
     }
 }

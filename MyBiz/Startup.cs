@@ -28,7 +28,7 @@ namespace MyBiz
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(@"Server=DESKTOP-PGOASLP\SQLEXPRESS; Database=MyBiz; Trusted_Connection=TRUE");
+                options.UseSqlServer(@"Server=DESKTOP-1TG370G; Database=MyBiz; Trusted_Connection=TRUE");
             });
         }
 

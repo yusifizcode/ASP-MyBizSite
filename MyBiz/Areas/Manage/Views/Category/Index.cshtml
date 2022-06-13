@@ -1,0 +1,38 @@
+﻿@model List<Category>
+@{
+    ViewData["Title"] = "Index";
+    int count = 0;
+}
+
+<h1>Index</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+
+            <a asp-action="create" class="btn btn-primary mb-3">Create</a>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cat in Model)
+                    {
+                        count++;
+                        <tr>
+                            <th scope="row">@count</th>
+                            <td>@cat.Name</td>
+                            <td><a asp-action="edit" asp-route-id="@cat.Id" class="btn btn-warning">Edit</a></td>
+                            <td><a asp-action="delete" asp-route-id="@cat.Id" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
